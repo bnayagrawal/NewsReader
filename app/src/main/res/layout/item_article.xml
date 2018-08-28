@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <import type="xyz.bnayagrawal.android.newsreader.util.MyDate"/>
+        <variable
+            name="Presenter"
+            type="xyz.bnayagrawal.android.newsreader.feature.news.ArticlePresenter"/>
+        <variable
+            name="Article"
+            type="xyz.bnayagrawal.android.newsreader.data.model.Article" />
+    </data>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/list_item"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{()->Presenter.onItemClick(listItem,Article)}"
+        android:background="@drawable/ripple_effect">
+
+        <ImageView
+            android:id="@+id/img_article_image"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_placeholder_thumb" />
+
+        <TextView
+            android:id="@+id/tv_article_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{Article.title}"
+            tools:text="Article very long Title"
+            android:textColor="?android:attr/textColorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_article_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/img_article_image"
+            app:layout_constraintTop_toTopOf="@+id/tv_article_author"
+            android:src="@drawable/ic_author" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/img_article_image"
+            app:layout_constraintTop_toTopOf="@+id/tv_article_date"
+            app:srcCompat="@drawable/ic_time" />
+
+        <TextView
+            android:id="@+id/tv_article_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text='@{Article.author.length == 0 ? "N/A" : Article.author}'
+            android:textSize="12sp"
+            tools:text="Neil"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_article_title" />
+
+        <TextView
+            android:id="@+id/tv_article_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@{MyDate.getTimeAgo(Article.publishedAt)}"
+            android:textSize="12sp"
+            tools:text="23rd August 2018"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_article_author" />
+
+        <TextView
+            android:id="@+id/tv_article_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/source_background"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:text='@{Article.sourceName == null ? "N/A" : Article.sourceName}'
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            tools:text="NDTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_article_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_article_date"
+            app:layout_constraintVertical_bias="1.0" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

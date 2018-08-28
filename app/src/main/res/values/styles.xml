@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="layoutBackground">@color/layoutBackgroundLight</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryLight</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryLight</item>
+        <item name="android:tabWidgetStyle">@style/TabThemeLight</item>
+        <item name="iconColor">@color/iconTintLight</item>
+        <item name="toolbarIconColor">@android:color/black</item>
+        <item name="placeholderBackgroundColor">@color/placeholderBackgroundLight</item>
+        <item name="placeholderContentColor">@color/placeholderContentLight</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <!-- Dark theme -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorDarkPrimary</item>
+        <item name="colorPrimaryDark">@color/colorDarkPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="layoutBackground">@color/layoutBackgroundDark</item>
+        <item name="iconColor">@color/iconTintDark</item>
+        <item name="toolbarIconColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryDark</item>
+        <item name="android:tabWidgetStyle">@style/TabThemeDark</item>
+        <item name="placeholderBackgroundColor">@color/placeholderBackgroundDark</item>
+        <item name="placeholderContentColor">@color/placeholderContentDark</item>
+    </style>
+
+    <!-- Black theme -->
+    <style name="AppThemeBlack" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="iconColor">@color/iconTintDark</item>
+        <item name="toolbarIconColor">@android:color/white</item>
+        <item name="layoutBackground">@color/layoutBackgroundBlack</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryDark</item>
+        <item name="android:tabWidgetStyle">@style/TabThemeBlack</item>
+        <item name="placeholderBackgroundColor">@color/placeholderBackgroundDark</item>
+        <item name="placeholderContentColor">@color/placeholderContentDark</item>
+    </style>
+
+    <!-- Toolbar theme -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Tab theme light -->
+    <style name="TabThemeLight" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/colorTabBackgroundLight</item>
+        <item name="tabSelectedTextColor">@color/colorBlack</item>
+        <item name="tabTextColor">@color/tabTextColorLight</item>
+    </style>
+
+    <!-- Tab theme dark -->
+    <style name="TabThemeDark" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/colorTabBackgroundDark</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+    </style>
+
+    <!-- Tab theme black-->
+    <style name="TabThemeBlack" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/colorTabBackgroundBlack</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabTextColor">@color/tabTextColorDark</item>
+    </style>
+
+    <style name="AppThemeDark.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeDark.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Splash theme -->
+    <style name="splashScreenTheme" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+</resources>

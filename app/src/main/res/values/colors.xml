@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default white theme -->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#e0e0e0</color>
+    <color name="colorAccent">#E62118</color>
+    <color name="rippleColor">#56e62118</color>
+
+    <!-- Dark theme -->
+    <color name="colorDarkPrimary">#212121</color>
+    <color name="colorDarkPrimaryDark">#000000</color>
+
+    <!-- Black theme -->
+    <color name="colorBlack">#000000</color>
+
+    <!-- Text color light and dark-->
+    <color name="textColorPrimaryLight">#000000</color>
+    <color name="textColorSecondaryLight">#616161</color>
+    <color name="textColorPrimaryDark">#FFFFFF</color>
+    <color name="textColorSecondaryDark">#9e9e9e</color>
+
+    <!-- Tab background color -->
+    <color name="colorTabBackgroundLight">#F7F9FA</color>
+    <color name="colorTabBackgroundDark">#1a1a1a</color>
+    <color name="colorTabBackgroundBlack">#000000</color>
+
+    <!-- Tab un-selected text color -->
+    <color name="tabTextColorLight">#757575</color>
+    <color name="tabTextColorDark">#46000000</color>
+
+    <!-- For layout background for e.g. recycler item -->
+    <color name="layoutBackgroundLight">#FFFFFF</color>
+    <color name="layoutBackgroundDark">#292929</color>
+    <color name="layoutBackgroundBlack">#000000</color>
+
+    <!-- For icon -->
+    <color name="iconTintLight">#9e9e9e</color>
+    <color name="iconTintDark">#616161</color>
+
+    <!-- For placeholder -->
+    <color name="placeholderBackgroundLight">#E0E0E0</color>
+    <color name="placeholderContentLight">#C2C2C2</color>
+    <color name="placeholderBackgroundDark">#424242</color>
+    <color name="placeholderContentDark">#616161</color>
+</resources>
